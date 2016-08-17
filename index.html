@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<html lang="en">
+    <head>
+        <title>Roshni Kaushik</title>
+        <!-- for-mobile-apps -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="roshni kaushik personal webpage website resume cv" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+            function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!-- //for-mobile-apps -->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- js -->
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!-- //js -->
+        <!-- fonts -->
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'><!-- //fonts -->
+
+        <!-- start-smoth-scrolling -->
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){		
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+        </script>
+        <!-- start-smoth-scrolling -->
+    </head>
+    <body>
+        <!-- banner -->
+        <div class="header-top">
+            <div class="container">
+                <ul>
+                    <li><a class="scroll" href="#about">About</a></li>
+                    <li><a class="scroll" href="#employment">Work Experience</a></li>
+                    <li><a class="scroll" href="#portfolio">Portfolio</a></li>
+                    <li><a class="scroll" href="#forfun">Recreational</a></li>
+                </ul>
+            </div>
+        </div>	
+        <div class="header">
+            <div class="container">
+                <div class="col-md-8 header-left">
+                    <div class="col-sm-5 pro-pic">
+                        <img class="img-responsive" src="images/my_photo.jpg" alt=" "/>
+                    </div>
+                    <div class="col-sm-5 pro-text">
+                        <h1>Roshni Kaushik</h1>
+                        <p>Mechanical Engineering Student</p>
+                        <p>Interested in Robotics and Control Systems</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-4 header-right ">
+                    <ul class="list-left">
+                        <li>Email:</li>
+                        <li>Github:</li>
+                        <li>LinkedIn:</li>
+                    </ul>
+                    <ul class="list-right">
+                        <li><a href="mailto:roshni.s.kaushik@gmail.com">roshni.s.kaushik@gmail.com</a></li>
+                        <li><a href="https://github.com/roshk99/">https://github.com/roshk99/</a></li>
+                        <li><a href="www.linkedin.com/in/roshni-kaushik">www.linkedin.com/in/roshni-kaushik</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //banner -->
+        <!-- about -->
+        <div id="about" class="about">
+            <div class="container">
+                <h3 class="tittle">About Me</h3>
+                <p class="abt-para"></p>
+            </div>
+            <div class="col-md-6 abt-left ">
+                <h2>Education</h2>
+                <div class="accordion">
+                    <div class="accordion-section">
+                        <h5><a class="accordion-section-title active" href="#accordion-1">
+                            <span>2013 - 2017</span>Rice University
+                            <i class="glyphicon glyphicon-chevron-down"></i><div class="clearfix"></div>
+                            </a></h5>
+                        <div id="accordion-1" class="accordion-section-content active">
+                            <h6>GPA: 3.92</h6>
+                            <ul>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Mechanical Engineering Major</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Business Minor</a></li>
+                            </ul>
+                        </div>
+                    </div>						
+                    <div class="accordion-section">
+                        <h5><a class="accordion-section-title active" href="#accordion-4">
+                            Clubs
+                            <i class="glyphicon glyphicon-chevron-down"></i><div class="clearfix"></div>
+                            </a></h5>
+                        <div id="accordion-4" class="accordion-section-content">
+                            <h6>GPA: 3.92</h6>
+                            <ul>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">American Society of Mechanical Engineers (ASME)</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Society of Women Engineers (SWE)</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Rice Apps (software development)</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Step Ahead (Spanish Volunteering)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    jQuery(document).ready(function() {
+                        var currentAttrValue = jQuery('.accordion-section-title').attr('href');
+                        // Add active class to section title
+                        jQuery('.accordion-section-title').addClass('active');
+                        // Open up the hidden content panel
+                        jQuery('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+
+
+                        function close_accordion_section() {
+                            jQuery('.accordion .accordion-section-title').removeClass('active');
+                            jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+                        }
+
+                        jQuery('.accordion-section-title').click(function(e) {
+                            // Grab current anchor value
+                            var currentAttrValue = jQuery(this).attr('href');
+
+                            if(jQuery(e.target).is('.active')) {
+                                close_accordion_section();
+                            }else {
+                                close_accordion_section();
+
+                                // Add active class to section title
+                                jQuery(this).addClass('active');
+                                // Open up the hidden content panel
+                                jQuery('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+                            }
+
+                            e.preventDefault();
+                        });
+                    });
+                </script>
+            </div>
+            <div class="col-md-6 abt-left ">
+                <h2>Technologies</h2>
+                <div class="accordion">
+                    <div class="accordion-section">
+                        <h5><a class="accordion-section-title active" href="#accordion-2">
+                            Software
+                            <i class="glyphicon glyphicon-chevron-down"></i><div class="clearfix"></div>
+                            </a></h5>
+                        <div id="accordion-2" class="accordion-section-content active">
+                            <ul>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">HTML</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">CSS</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Javascript</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Python</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">PHP</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Google App Engine</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Phone Gap</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">TornadoWeb</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">R</a></li>
+                            </ul>
+                        </div>
+                    </div>						
+                    <div class="accordion-section">
+                        <h5><a class="accordion-section-title active" href="#accordion-3">
+                            Hardware
+                            <i class="glyphicon glyphicon-chevron-down"></i><div class="clearfix"></div>
+                            </a></h5>
+                        <div id="accordion-3" class="accordion-section-content">
+                            <ul>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">MATLAB</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Solidworks</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">ROS</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Raspberry Pi</a></li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Arduino</a></li>
+                            </ul>
+                        </div>
+                    </div>	
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- about -->
+            <!-- education -->
+            <div id="employment" class="employment">
+                <div class="container">
+                    <h3 class="tittle ">Work Experience</h3>
+                    <p class="abt-para ">Experience in industry and research.</p>
+                    <div class="row">
+                        <div class="col-md-6 employm-left">
+                            <h4>Summer '16</h4>
+                        </div>
+                        <div class="col-md-6 employm-right employm-text-right">
+                            <h5>SURE Program in Robotics</h5>
+                            <p>I worked at <a href="http://www.rail.gatech.edu/">RAIL</a> (Robotic Autonomy and Interactive Lab) at Georgia Tech through a summer research program.
+                                My advisor was <a href="http://www.cc.gatech.edu/~chernova/">Sonia Chernova</a>, and I worked closely with post-doctoral fellow <a href="http://www.cc.gatech.edu/~sesmaeil/">Reza Ahmadzadeh</a>.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 employm-left employm-text-left">
+                            <h5>Engineering Design Head Writing Mentor</h5>
+                            <p>I worked as the head writing mentor to a freshman engineering design course (<a href="http://oedk.rice.edu/engi120">ENGI 120</a>) during my senior year of college. It involved technical writing, organizational, and leadership skills.</p>
+                        </div>
+                        <div class="col-md-6 employm-right">
+                            <h4>'16 - '17</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 employm-left">
+                            <h4>'14-'16</h4>
+                        </div>
+                        <div class="col-md-6 employm-right employm-text-right">
+                            <h5>Engineering Design Writing Mentor</h5>
+                            <p>I worked as a writing mentor, assisting with a freshman engineering design course (<a href="http://oedk.rice.edu/engi120">ENGI 120</a>), for two years. I mentored students in technical writing.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 employm-left employm-text-left">
+                            <h5>Quality Assurance Automation Intern</h5>
+                            <p>I developed automation scripts to test current products and identify defects for <a href="http://www.ironsolutions.com/">IRON Solutions</a>.</p>
+                        </div>
+                        <div class="col-md-6 employm-right">
+                            <h4>Summer '14-'15</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 employm-left">
+                            <h4>Summer '15</h4>
+                        </div>
+                        <div class="col-md-6 employm-right employm-text-right">
+                            <h5>Software Development and Marketing Intern</h5>
+                            <p>I performed market research, competitive analysis, database development, website design for <a href="http://www.humantalented.com/">Human Talented</a>.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- education -->
+            <!-- portfolio -->
+            <div id="portfolio" class="portfolio">
+                <div class="container">
+                    <h3 class="tittle ">Portfolio</h3>
+                    <div class="portfolio-grids">
+                        <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $('#horizontalTab').easyResponsiveTabs({
+                                    type: 'default', //Types: default, vertical, accordion           
+                                    width: 'auto', //auto or any width like 600px
+                                    fit: true   // 100% fit in a container
+                                });
+                            });
+
+                        </script>
+                        <div class="sap_tabs">
+                            <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+                                <ul class="resp-tabs-list">
+                                    <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>All</span></li> 
+                                    <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Web Design/Hardware</span></li> 
+                                    <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Publications</span></li>
+                                    <!--<li class="resp-tab-item" aria-controls="tab_item-3" role="tab"><span>Other</span></li>-->
+                                </ul>				  	 	  	 
+                                <div class="resp-tabs-container">
+                                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+                                        <div class="col-md-3 team-gd ">
+                                            <div class="thumb">
+                                                <a href="#safeModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/safe_safe.jpg" alt="">
+                                                    <div class="team_pos">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="morph pic fb_icon1">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 team-gd ">
+                                            <div class="thumb">
+                                                <a href="#humanoidsModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/humanoids.jpg" alt="">
+                                                    <div class="team_pos">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="morph pic fb_icon1">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 team-gd ">
+                                            <div class="thumb">
+                                                <a href="#petitionsModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/petitions.jpg" alt="">
+                                                    <div class="team_pos">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="morph pic fb_icon1">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 team-gd ">
+                                            <div class="thumb">
+                                                <a href="#degreeplannerModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/degreeplanner.jpg" alt="">
+                                                    <div class="team_pos">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="morph pic fb_icon1">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                                        <div class="col-md-3 team-gd ">
+                                            <div class="thumb">
+                                                <a href="#safeModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/safe_safe.jpg" alt="">
+                                                    <div class="team_pos">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="morph pic fb_icon1">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 team-gd ">
+                                            <div class="thumb">
+                                                <a href="#petitionsModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/petitions.jpg" alt="">
+                                                    <div class="team_pos">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="morph pic fb_icon1">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 team-gd ">
+                                            <div class="thumb">
+                                                <a href="#degreeplannerModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/degreeplanner.jpg" alt="">
+                                                    <div class="team_pos">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="morph pic fb_icon1">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+                                        <div class="col-md-3 team-gd ">
+                                            <div class="thumb">
+                                                <a href="#humanoidsModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/humanoids.jpg" alt="">
+                                                    <div class="team_pos">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="morph pic fb_icon1">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-3">
+
+                                    </div>
+                                </div><!--resp-tab container-->
+                            </div><!--Horizontal Tab-->
+                        </div> <!--sap-tabs-->
+                    </div> <!--portfolio grid-->
+                </div> <!--container-->
+            </div> <!--portfolio-->
+            <!-- //portfolio -->
+            <div class="portfolio-modal modal fade slideanim" id="safeModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>A Safe Safe</h3>
+                                    <!--<img src="images/safe_safe.jpg" class="img-responsive img-centered" alt="">-->
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe src="https://www.youtube.com/embed/jg98_d1sxMw"></iframe>
+                                    </div>
+                                    <p>This was a hackathon project developed during HackRice 2016 in 36 hrs (<a href="https://github.com/roshk99/A_Safe_Safe">Repository</a>). It allows the user to lock and unlock a safe from his/her phone. It also allows the user to check if the safe is locked or unlocked as well as change the master password that secures the app. It also provides visual feedback (LED), audio feedback (buzzer), and physical feedback (servo moving a latch up and down to lock and unlock)</p>
+                                    <p style="color: lightskyblue;">Raspberry Pi running TornadoWeb, Arduino with the ability to connect to a computer with Arduino IDE, Computer running PhoneGap software, Smartphone running PhoneGap Developer App</p>
+                                    <p>Developed along with Amelia Bian</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="humanoidsModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>2016 IEEE-RAS International Conference on Humanoid Robots</h3>
+                                    <img src="images/humanoids.jpg" class="img-responsive img-centered" alt="">
+                                    <p>I co-authored a paper detailing my research during the SURE Robotics Program for the Humanoids Conference. <span style="font-style: italic">Trajectory Learning from Demonstration: A Parameter-free Approach</span> (under review)</p>
+                                    <p>Authors: S. Reza Ahmedzadeh, Roshni Kaushik, Sonia Chernova</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="petitionsModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Rice Apps - Petitions Web App</h3>
+                                    <img src="images/petitions.jpg" class="img-responsive img-centered" alt="">
+                                    <p>I wrote an open-source web application (still in development) that allows: (1) organizations to create elections with a time-frame and positions, (2) Rice students to create petitions to be on the ballot for those elections, (3) other Rice students to sign those petitions, and (4) email notifications to the petitioner and the organization administrators when the required number of signatures have been met. This was created for a web development club called Rice Apps (<a href="https://github.com/rice-apps/petition-app">Repository</a>)</p>
+                                    <p>Technologies Used: Google App Engine with Python, HTML/CSS/Javascript</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="degreeplannerModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Rice Apps - Petitions Web App</h3>
+                                    <img src="images/degreeplanner.jpg" class="img-responsive img-centered" alt="">
+                                    <p>I wrote an open-source web application (still in development) that allows students to plan their entire 4-year schedule. It checks for prerequisites, corequisites, and degree requirements. (<a href="https://github.com/roshk99/degree-planner">Repository</a>)</p>
+                                    <p>Technologies Used: Google App Engine with Python, HTML/CSS/Javascript</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for bootstrap working -->
+            <div class="forfun" id="forfun">
+                <div class="container">
+                    <h3 class="tittle ">Recreational</h3>
+                    <div class="col-md-6 text-center">
+                        <!--<h3 class="sub-rec">Books</h3>-->
+                        <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
+                        <style type="text/css" media="screen">
+                            .gr_custom_container_1470853132 {
+                                /* customize your Goodreads widget container here*/
+                                border: 1px solid gray;
+                                border-radius:10px;
+                                padding: 10px 5px 10px 5px;
+                                background-color: #FFFFFF;
+                                color: #000000;
+                                width: 500px
+                            }
+                            .gr_custom_header_1470853132 {
+                                /* customize your Goodreads header here*/
+                                border-bottom: 1px solid gray;
+                                width: 100%;
+                                margin-bottom: 5px;
+                                text-align: center;
+                                font-size: 120%
+                            }
+                            .gr_custom_each_container_1470853132 {
+                                /* customize each individual book container here */
+                                width: 100%;
+                                clear: both;
+                                margin-bottom: 10px;
+                                overflow: auto;
+                                padding-bottom: 4px;
+                                border-bottom: 1px solid #aaa;
+                            }
+                            .gr_custom_book_container_1470853132 {
+                                /* customize your book covers here */
+                                overflow: hidden;
+                                height: 60px;
+                                float: left;
+                                margin-right: 4px;
+                                width: 39px;
+                            }
+                            .gr_custom_author_1470853132 {
+                                /* customize your author names here */
+                                font-size: 10px;
+                            }
+                            .gr_custom_tags_1470853132 {
+                                /* customize your tags here */
+                                font-size: 10px;
+                                color: gray;
+                            }
+                            .gr_custom_rating_1470853132 {
+                                /* customize your rating stars here */
+                                float: right;
+                            }
+                        </style>
+
+                        <div id="gr_custom_widget_1470853132">
+                            <div class="gr_custom_container_1470853132">
+                                <h2 class="gr_custom_header_1470853132">
+                                    <a style="text-decoration: none;" href="https://www.goodreads.com/review/list/4497393-roshni?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">Roshni&#39;s bookshelf: read</a>
+                                </h2>
+                                <div class="gr_custom_each_container_1470853132">
+                                    <div class="gr_custom_book_container_1470853132">
+                                        <a title="An Absence Of Light" href="https://www.goodreads.com/review/show/1723399174?utm_medium=api&amp;utm_source=custom_widget"><img alt="An Absence Of Light" border="0" src="https://d.gr-assets.com/books/1172543884s/188193.jpg" /></a>
+                                    </div>
+                                    <div class="gr_custom_rating_1470853132">
+                                        <span class=" staticStars"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                                    </div>
+                                    <div class="gr_custom_title_1470853132">
+                                        <a href="https://www.goodreads.com/review/show/1723399174?utm_medium=api&amp;utm_source=custom_widget">An Absence Of Light</a>
+                                    </div>
+                                    <div class="gr_custom_author_1470853132">
+                                        by <a href="https://www.goodreads.com/author/show/109640.David_L_Lindsey">David L. Lindsey</a>
+                                    </div>
+                                    <div class="gr_custom_review_1470853132">
+                                        A fast-paced thriller set in Houston. The complex spycraft and intrigue races to a climax that is realistic and therefore not completely tied up in a bow. 
+                                    </div>
+                                    <div class="gr_custom_tags_1470853132">
+                                        tagged:
+                                        thriller
+                                    </div>
+                                </div>
+                                <div class="gr_custom_each_container_1470853132">
+                                    <div class="gr_custom_book_container_1470853132">
+                                        <a title="The Eye of Jade (A Mei Wang Mystery, #1)" href="https://www.goodreads.com/review/show/1723397705?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Eye of Jade" border="0" src="https://d.gr-assets.com/books/1435180019s/1614776.jpg" /></a>
+                                    </div>
+                                    <div class="gr_custom_rating_1470853132">
+                                        <span class=" staticStars"><img alt="liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                                    </div>
+                                    <div class="gr_custom_title_1470853132">
+                                        <a href="https://www.goodreads.com/review/show/1723397705?utm_medium=api&amp;utm_source=custom_widget">The Eye of Jade</a>
+                                    </div>
+                                    <div class="gr_custom_author_1470853132">
+                                        by <a href="https://www.goodreads.com/author/show/517855.Diane_Wei_Liang">Diane Wei Liang</a>
+                                    </div>
+                                    <div class="gr_custom_review_1470853132">
+                                        The mystery itself is not that exciting but its interweaving with Chinese history and culture are what make it an interesting read
+                                    </div>
+                                    <div class="gr_custom_tags_1470853132">
+                                        tagged:
+                                        culture-history and mystery
+                                    </div>
+                                </div>
+                                <div class="gr_custom_each_container_1470853132">
+                                    <div class="gr_custom_book_container_1470853132">
+                                        <a title="Chanakya's Chant" href="https://www.goodreads.com/review/show/1715502155?utm_medium=api&amp;utm_source=custom_widget"><img alt="Chanakya's Chant" border="0" src="https://d.gr-assets.com/books/1327939570s/10098912.jpg" /></a>
+                                    </div>
+                                    <div class="gr_custom_rating_1470853132">
+                                        <span class=" staticStars"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                                    </div>
+                                    <div class="gr_custom_title_1470853132">
+                                        <a href="https://www.goodreads.com/review/show/1715502155?utm_medium=api&amp;utm_source=custom_widget">Chanakya's Chant</a>
+                                    </div>
+                                    <div class="gr_custom_author_1470853132">
+                                        by <a href="https://www.goodreads.com/author/show/4230687.Ashwin_Sanghi">Ashwin Sanghi</a>
+                                    </div>
+                                    <div class="gr_custom_review_1470853132">
+                                        This is an expertly written book, switching between the time of Chanakya and present-day. Some of the things attributed to Chanakya are probably a bit exaggerated, but the political intrigue and ruthlessness makes for an excellent read. 
+                                    </div>
+                                    <div class="gr_custom_tags_1470853132">
+                                        tagged:
+                                        culture-history and thriller
+                                    </div>
+                                </div>
+                                <div class="gr_custom_each_container_1470853132">
+                                    <div class="gr_custom_book_container_1470853132">
+                                        <a title="The Sinister Pig (Leaphorn  &amp; Chee, #16)" href="https://www.goodreads.com/review/show/1715500398?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Sinister Pig" border="0" src="https://d.gr-assets.com/books/1442001600s/48092.jpg" /></a>
+                                    </div>
+                                    <div class="gr_custom_rating_1470853132">
+                                        <span class=" staticStars"><img alt="liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                                    </div>
+                                    <div class="gr_custom_title_1470853132">
+                                        <a href="https://www.goodreads.com/review/show/1715500398?utm_medium=api&amp;utm_source=custom_widget">The Sinister Pig</a>
+                                    </div>
+                                    <div class="gr_custom_author_1470853132">
+                                        by <a href="https://www.goodreads.com/author/show/26917.Tony_Hillerman">Tony Hillerman</a>
+                                    </div>
+                                    <div class="gr_custom_review_1470853132">
+                                        Chee and Leaphorn get mixed up in some espionage. The whole Chee/Bernie thing gets in the way of the story a bit, but overall, still an entertaining read.
+                                    </div>
+                                    <div class="gr_custom_tags_1470853132">
+                                        tagged:
+                                        mystery and culture-history
+                                    </div>
+                                </div>
+                                <div class="gr_custom_each_container_1470853132">
+                                    <div class="gr_custom_book_container_1470853132">
+                                        <a title="The Seventh Trumpet (Sister Fidelma, #23)" href="https://www.goodreads.com/review/show/1692269275?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Seventh Trumpet" border="0" src="https://d.gr-assets.com/books/1331613326s/13539710.jpg" /></a>
+                                    </div>
+                                    <div class="gr_custom_rating_1470853132">
+                                        <span class=" staticStars"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                                    </div>
+                                    <div class="gr_custom_title_1470853132">
+                                        <a href="https://www.goodreads.com/review/show/1692269275?utm_medium=api&amp;utm_source=custom_widget">The Seventh Trumpet</a>
+                                    </div>
+                                    <div class="gr_custom_author_1470853132">
+                                        by <a href="https://www.goodreads.com/author/show/16291.Peter_Tremayne">Peter Tremayne</a>
+                                    </div>
+                                    <div class="gr_custom_review_1470853132">
+                                        It's been a long time since I've read a Fidelma, and this one did not disappoint. Filled with complex twists and turns, multiple intertwined threads, historical and religious tidbits, and political intrigue, this book is an entertaining ...
+                                    </div>
+                                    <div class="gr_custom_tags_1470853132">
+                                        tagged:
+                                        historical-mystery
+                                    </div>
+                                </div>
+                                <br style="clear: both"/>
+                                <center>
+                                    <a href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://www.goodreads.com/images/widget/widget_logo.gif" /></a>
+                                </center>
+                                <noscript>
+                                    Share <a href="https://www.goodreads.com/">book reviews</a> and ratings with Roshni, and even join a <a href="https://www.goodreads.com/group">book club</a> on Goodreads.
+                                </noscript>
+                            </div>
+
+                        </div>
+                        <script src="https://www.goodreads.com/review/custom_widget/4497393.Roshni's%20bookshelf:%20read?cover_position=left&cover_size=small&num_books=5&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=1&show_tags=1&show_title=0&sort=date_read&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1470853132&widget_text_color=000000&widget_title_size=medium&widget_width=wide" type="text/javascript" charset="utf-8"></script>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <h3 class="sub-rec">Arts and Crafts</h3>
+                        <div class="row">
+                            <div class="col-md-4 team-gd ">
+                                <div class="thumb">
+                                    <a href="#craft1Modal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/craft1.jpg" alt="">
+                                        <div class="team_pos">
+                                            <ul>
+                                                <li>
+                                                    <div class="morph pic fb_icon1">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 team-gd ">
+                                <div class="thumb">
+                                    <a href="#craft2Modal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/craft2_cropped.jpg" alt="">
+                                        <div class="team_pos">
+                                            <ul>
+                                                <li>
+                                                    <div class="morph pic fb_icon1">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 team-gd ">
+                                <div class="thumb">
+                                    <a href="#craft3Modal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/craft3_cropped.jpg" alt="">
+                                        <div class="team_pos">
+                                            <ul>
+                                                <li>
+                                                    <div class="morph pic fb_icon1">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 team-gd ">
+                                <div class="thumb">
+                                    <a href="#art1Modal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/art1_cropped.jpg" alt="">
+                                        <div class="team_pos">
+                                            <ul>
+                                                <li>
+                                                    <div class="morph pic fb_icon1">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 team-gd ">
+                                <div class="thumb">
+                                    <a href="#art2Modal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/art2_cropped.jpg" alt="">
+                                        <div class="team_pos">
+                                            <ul>
+                                                <li>
+                                                    <div class="morph pic fb_icon1">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="sub-rec">Music and Dance</h3>
+                        <div class="col-md-4 team-gd ">
+                            <div class="thumb">
+                                <a href="#musicModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/music.png" alt="">
+                                    <div class="team_pos">
+                                        <ul>
+                                            <li>
+                                                <div class="morph pic fb_icon1">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 team-gd ">
+                            <div class="thumb">
+                                <a href="#kathakModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/kathak1.png" alt="">
+                                    <div class="team_pos">
+                                        <ul>
+                                            <li>
+                                                <div class="morph pic fb_icon1">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 team-gd ">
+                            <div class="thumb">
+                                <a href="#bharatanatyamModal" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/bharatanatyam.jpg" alt="">
+                                    <div class="team_pos">
+                                        <ul>
+                                            <li>
+                                                <div class="morph pic fb_icon1">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-modal modal fade slideanim" id="craft1Modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Cross-stitch</h3>
+                                    <img src="images/craft1.jpg" class="img-responsive img-centered" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="craft2Modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Knitting</h3>
+                                    <img src="images/craft2.jpg" class="img-responsive img-centered" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="craft3Modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Crocheting</h3>
+                                    <img src="images/craft3.jpg" class="img-responsive img-centered" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="art1Modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Pencil Drawing</h3>
+                                    <img src="images/art1.jpg" class="img-responsive img-centered" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="art2Modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Scratchboard</h3>
+                                    <img src="images/art2.jpg" class="img-responsive img-centered" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="musicModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Carnatic Music</h3>
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/paUq9OKz5U0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="kathakModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Kathak</h3>
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j0xyweuBsn4"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-modal modal fade slideanim" id="bharatanatyamModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content port-modal">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <div class="modal-body">
+                                    <h3>Bharatanatyam</h3>
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QdIA6agoyv0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //for bootstrap working -->
+            <!--scrolling js-->
+            <script src="js/jquery.nicescroll.js"></script>
+            <script src="js/scripts.js"></script>
+            <!--//scrolling js-->
+            <!-- smooth scrolling -->
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    /*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+                });
+            </script>
+            <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+            <!-- //smooth scrolling -->
+
+            </body>
+        </html>

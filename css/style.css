@@ -297,8 +297,9 @@ a.accordion-section-title span {
 
 .employm-left, .employm-right {
     width: 45%;
-    min-height: 200px;
+    min-height: 100px;
     float: left;
+    text-align: right;
 }
 .employm-text-right {
     border-left: 1px solid #B1B1B1;
@@ -307,18 +308,18 @@ a.accordion-section-title span {
     border-right: 1px solid #B1B1B1;
 }
 .employm-right h5, .employm-left h5 {
-    font-size: 22px;
+    font-size: 30px;
     color: #10A7AF;
     text-transform: uppercase;
     padding-top: 5%;
     padding-bottom: 2%;
 }
 .employm-right h4, .employm-left h4 {
-    font-size: 50px;
+    font-size: 40px;
     color: #000;
     font-style: italic;
     text-transform: uppercase;
-    padding-top: 15%;
+    padding-top: 10%;
 }
 .employm-right p, .employm-left p {
     padding-left: 10%;

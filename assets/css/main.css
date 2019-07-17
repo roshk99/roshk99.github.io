@@ -193,15 +193,32 @@ input, select, textarea {
 		margin-bottom: 1.5em;
 	}
 
-	.feature {
-		text-align: center;
+	.feature, h2 {
+        text-align: center;
+        font-size: 1.2em;
+        padding-bottom: 0.5em;
 	}
+
+header, h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+    .feature, p {
+        text-align: center;
+        font-size: 1em;
+	}
+
 
 /* Sections/Article */
 
 	section, article {
 		margin-bottom: 3em;
 	}
+
+article, p {
+    text-align: left;
+}
 
 	section > :last-child,
 	article > :last-child,
@@ -1860,6 +1877,7 @@ input, select, textarea {
 	ul.icons {
 		list-style: none;
 		padding-left: 0;
+        text-align: left
 	}
 
 		ul.icons li {
@@ -2082,11 +2100,11 @@ input, select, textarea {
 		position: relative;
 		padding: 4em 0 2em 0;
 		background-image: url("images/header.svg");
-		background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg, #FF7088 15%, #F2B69D 55%);
-		background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg, #FF7088 15%, #F2B69D 55%);
-		background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg, #FF7088 15%, #F2B69D 55%);
-		background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg, #FF7088 15%, #F2B69D 55%);
-		background-color: #f08c89;
+		background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg, #051896 15%, #29a2e3 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg, #051896 15%, #29a2e3 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg, #051896 15%, #29a2e3 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg, #051896 15%, #29a2e3 55%);
+		background-color: #051896;
 		background-size: 100% 620%;
 		background-size: 128px 128px, 100% 620%, auto;
 		background-repeat: repeat, no-repeat, no-repeat;
@@ -2661,6 +2679,7 @@ input, select, textarea {
 				font-size: 1.5em;
 				line-height: 1.25em;
 			}
+        
 
 		/* Sections/Article */
 
@@ -2932,9 +2951,7 @@ input, select, textarea {
 				letter-spacing: 0;
 			}
 
-			.feature {
-				text-align: left;
-			}
+
 
 		/* Sections/Article */
 

@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+Telephasic by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>Roshni Kaushik</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="no-sidebar is-preload">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <div id="header-wrapper">
+      <div id="header" class="container">
+
+        <!-- Logo -->
+        <h1 id="logo"><a href="../index.html">Roshni Kaushik</a></h1>
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="../experience.html">Experience </a>
+            </li>
+            <li>
+              <a href="../research.html">Research </a>
+            </li>
+            <li class="break">
+              <a href="../educationskills.html">Education and Skills </a>
+            </li>
+            <li>
+              <a href="../blog.html">Blog </a>
+            </li>
+            <li>
+              <a href="../forfun.html">For Fun </a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div class="wrapper">
+      <div class="container" id="main">
+
+        <!-- Content -->
+        <article id="content">
+          <header>
+            <h2>Multiple Stimuli, One Question using Qualtrics</h2>
+          </header>
+
+            <p>Do you have a set of stimuli (images, videos, etc.) that you want to ask your participants about? Qualtrics has a useful <strong>Loop and Merge</strong> feature that can allow you to do that. Here is how to set it up.</p>
+
+            <p>Note that this tutorial assumes a working knowledge of Qualtrics, which has great documentation for any general questions you have.</p>
+
+            <h3 >Step 1: Upload your stimuli to your Qualtrics Library</h3>
+
+              <p>If your images or videos are already stored on the cloud and are accessible via a URL, skip this step.</p>
+
+              <p>Let us say you have a set of videos labeled <code>001.mp4</code>, <code>002.mp4</code>, and so on. You should first go to the <code>Library</code> Tab at the top of Qualtrics and then click on the <code>Files Library</code> Tab.</p>
+
+              <p>I prefer to create a folder using the button on the left to store all my files for a particular survey.</p>
+
+              <p>Go to the <code>Upload a New File</code> button and upload all your <code>.mp4</code> files</p>
+
+              <h3>Step 2: Creating your spreadsheet</h3>
+
+                <p>I use Excel for this, but any spreadsheet software should work.</p>
+
+                <p>Set up a spreadsheet that looks like this, with a row for each of your stimuli. See the column and row labels. We will use these later.</p>
+                <style type="text/css">
+                .tg  {border-collapse:collapse;border-spacing:0;}
+                .tg td{border-color:black;border-style:solid;border-width:1px;
+                  overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg th{border-color:black;border-style:solid;border-width:1px;
+                  overflow:hidden;padding:10px 5px;word-break:normal; font-weight: bold;}
+                .tg .tg-cly1{text-align:center;vertical-align:middle}
+                .tg .tg-yla0{text-align:center;vertical-align:middle}
+                </style>
+                <table class="tg">
+                  <thead>
+                    <tr>
+                      <th class="tg-yla0"></th>
+                      <th class="tg-yla0">A</th>
+                      <th class="tg-yla0">B</th>
+                      <th class="tg-yla0">C</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tg-cly1">1</td>
+                      <td class="tg-cly1">Video Name</td>
+                      <td class="tg-cly1">File ID</td>
+                      <td class="tg-cly1">HTML</td>
+                    </tr>
+                    <tr>
+                      <td class="tg-cly1">2</td>
+                      <td class="tg-cly1">001</td>
+                      <td class="tg-cly1"></td>
+                      <td class="tg-cly1"></td>
+                    </tr>
+                    <tr>
+                      <td class="tg-cly1">3</td>
+                      <td class="tg-cly1">002</td>
+                      <td class="tg-cly1"></td>
+                      <td class="tg-cly1"></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>We will now fill out each of these columns</p>
+
+                <h3>Step 3: Getting your File IDs</h2>
+
+                <p>Go back to your Qualtrics Library. Click on the first video <code>001.mp4</code>, and click <code>View</code>.</p>
+
+                <p>The video should open in a new tab with a URL that ends with <code>F={{FILE ID}}</code>, where the <code>FILE ID</code> starts with a <code>F_</code>.</p>
+
+                <p>Copy that file ID and paste it into the second column of your spreadsheet. Repeat for each video.</p>
+
+                <h3>Step 4: Creating your Question Block</h3>
+
+                <p>Now go into your survey. Create the question as you would like it to appear for <code>001.mp4</code>.  For example, the HTML view for a centered video with full width and automatic height might look like this:</p>
+
+                <pre><code style="color:#e83e8c;">
+                  &lt;video class="qmedia" controls="true" height="auto" preload="auto" width="100%"&gt;
+                    &lt;source src="{{URL HERE ENDING WITH FILE ID}}" type="video/mp4"&gt;
+                    &lt;embed align="middle" autoplay="false" bgcolor="white"
+                    class="qmedia" controller="true" height="auto"
+                    pluginspage="http://www.apple.com/quicktime/download/"
+                    src="{{URL HERE ENDING WITH FILE ID}}" type="video/quicktime" width="100%"&gt;
+                  &lt;/video&gt;
+                </code></pre>
+
+                <p>Do you see where the URL appears in the HTML? The File IDs that we copied in Step 3 are the ending of that URL. Ideally, we want to change those File IDs at each iteration to match the ID for each video.</p>
+
+                <h2 id="step5creatingyourhtml">Step 5: Creating your HTML</h3>
+
+                <p>Unfortunately, we cannot simply insert the new File ID in the middle of the HTML. So here is the work-around and the reason we need a spreadsheet.</p>
+
+                <p>Copy the HTML for your question into a text editor that allows you to Find and Replace.</p>
+
+                <p>For this text to be a valid equation, we need to make a few replacements.</p>
+
+                <ul>
+                  <li>Quotes (<code>""</code>) are special characters in equations, so we need to replace each <code>"</code> with a double quote <code>""</code></li>
+
+                  <li>We cannot have an equation that is this long, so we need to add some concatenation symbols. Every ~200 characters in your equation, replace a space <code></code> with <code>" &amp; "</code></li>
+
+                  <li>Add an <code>=</code> to the beginning of the line</li>
+                </ul>
+
+                <p>For example, the HTML example from above would become:</p>
+
+                <pre><code style="color:#e83e8c">
+                  =&lt;video class="qmedia" controls="true" height="auto" preload="auto" width="100%"&gt;
+                  &lt;source src="{{URL HERE ENDING WITH FILE ID}}" " &amp; "
+                  type="video/mp4"&gt;&lt;embed align="middle" autoplay="false"
+                  bgcolor="white" class="qmedia" controller="true" height="auto"
+                  " &amp; " pluginspage="http://www.apple.com/quicktime/download/
+                  "  src="{{URL HERE ENDING WITH FILE ID}}" type="video/
+                  quicktime" " &amp; " width="100%"&gt;
+                  &lt;/video&gt;
+                </code></pre>
+
+                <p>Now look at your spreadsheet. Your first File ID is located in cell <code>B2</code>.</p>
+
+                <p><em>Find the File ID in your HTML and replace it with <code>" &amp; B2 &amp; "</code>.</em></p>
+
+                <p>You are now ready to copy your equation into cell <code>C2</code>. The File ID from video <code>001.mp4</code> should automatically be populated into cell <code>C2</code>. If you drag this equation down column <code>C</code>, you now have all your HTMLs!</p>
+
+                <h2 id="completingtheloopmerge">Completing the Loop &amp; Merge</h3>
+
+                <p>Back to Qualtrics.</p>
+
+                <p>Go to <code>Block Options -&gt; Loop &amp; Merge</code> in your question block, and turn on Loop &amp; Merge.</p>
+
+                <p>Copy your spreadsheet starting from <code>Row 2</code> all the way down. Click into the first cell in the Loop &amp; Merge table and paste the text.</p>
+
+                <p>Let's say you want to randomly choose 10 stimuli out of your entire set. If you go back to the Loop &amp; Merge settings, there is an option to <code>Randomize loop order</code> and you can present a fixed number of random stimuli to your participants.</p>
+
+                <p>Hit <code>Save</code>.</p>
+
+                <p>Now in your question text, you can put something like this to display the Question Number as well as the stimuli.</p>
+
+                <pre><code style="color:#e83e8c;">
+                  Question ${lm://CurrentLoopNumber} out of 10
+
+                  ${lm://Field/3}
+                </code></pre>
+
+                <p><strong>Remember Field 3 is your HTML.</strong></p>
+
+                <p>Test our your new set of questions by hitting <code>Preview</code> at the top and trying out your survey</p>
+
+                <strong>Last Updated: August 2020</strong>
+              </article>
+            </div>
+          </div>
+
+          <div id="copyright" class="container">
+            <ul class="menu">
+              <li><a href="https://html5up.net/telephasic">Telephasic Template by HTML5 UP</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.dropotron.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      </body>
+      </html>

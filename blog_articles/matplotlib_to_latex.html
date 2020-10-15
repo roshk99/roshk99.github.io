@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<!--
+Telephasic by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>Roshni Kaushik</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="no-sidebar is-preload">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <div id="header-wrapper">
+      <div id="header" class="container">
+
+        <!-- Logo -->
+        <h1 id="logo"><a href="../index.html">Roshni Kaushik</a></h1>
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="experience.html">Experience</a>
+            </li>
+            <li>
+              <a href="research.html">Research</a>
+            </li>
+            <li class="break">
+              <a href="educationskills.html">Education/Skills</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="forfun.html">For Fun</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div class="wrapper">
+      <div class="container" id="main">
+
+        <!-- Content -->
+        <article id="content">
+          <header>
+            <h2>Generate Latex-Friendly Figures with Matplotlib</h2>
+          </header>
+
+          <p>This tutorial explains how to use Matplotlib to generate figures using the Latex fonts to insert into your Latex document.</p>
+
+          <h2><a></a>Prerequisites</h2>
+          <p>You need to have Matplotlib installed and be able to create a figure with code like (original from <a href="https://matplotlib.org/gallery/lines_bars_and_markers/simple_plot.html#sphx-glr-gallery-lines-bars-and-markers-simple-plot-py">this</a>)</p>
+
+          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">import</span> matplotlib
+<span style="color: #000080; font-weight: bold">import</span> matplotlib.pyplot <span style="color: #000080; font-weight: bold">as</span> plt
+<span style="color: #000080; font-weight: bold">import</span> numpy <span style="color: #000080; font-weight: bold">as</span> np
+
+<span style="color: #008800; font-style: italic"># Data for plotting</span>
+t = np.arange(<span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">2.0</span>, <span style="color: #0000FF">0.01</span>)
+s = <span style="color: #0000FF">1</span> + np.sin(<span style="color: #0000FF">2</span> * np.pi * t)
+
+fig, ax = plt.subplots()
+ax.plot(t, s)
+
+ax.set(xlabel=<span style="color: #0000FF">&#39;time (s)&#39;</span>, ylabel=<span style="color: #0000FF">&#39;voltage (mV)&#39;</span>,
+title=<span style="color: #0000FF">&#39;About as simple as it gets, folks&#39;</span>)
+ax.grid()
+
+fig.savefig(<span style="color: #0000FF">&quot;test.png&quot;</span>)
+plt.show()
+        </pre></div><br>
+
+        <p>You also need to have MiKTex installed, which can be done <a href=https://miktex.org/download>here</a></p>
+
+        <p>Check if this is installed correctly by seeing if <code>xelatex --version</code> in the terminal returns correctly</p>
+
+        <h2>Setting up your Python Code</h2>
+
+        <p>Using the example code from above, modify it in the following way</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">import</span> matplotlib
+matplotlib.use(<span style="color: #0000FF">&#39;pgf&#39;</span>)
+
+<span style="color: #000080; font-weight: bold">import</span> matplotlib.pyplot <span style="color: #000080; font-weight: bold">as</span> plt
+
+plt.rcParams[<span style="color: #0000FF">&#39;text.latex.preamble&#39;</span>]=[<span style="color: #0000FF">r&quot;\usepackage{lmodern}&quot;</span>]
+params = {<span style="color: #0000FF">&#39;text.usetex&#39;</span> : True,
+                    <span style="color: #0000FF">&#39;font.size&#39;</span> : <span style="color: #0000FF">11</span>,
+                    <span style="color: #0000FF">&#39;font.family&#39;</span> : <span style="color: #0000FF">&#39;lmodern&#39;</span>,
+                    <span style="color: #0000FF">&#39;text.latex.unicode&#39;</span>: True}
+plt.rcParams.update(params)
+
+<span style="color: #000080; font-weight: bold">import</span> numpy <span style="color: #000080; font-weight: bold">as</span> np
+
+<span style="color: #008800; font-style: italic"># Data for plotting</span>
+t = np.arange(<span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">2.0</span>, <span style="color: #0000FF">0.01</span>)
+s = <span style="color: #0000FF">1</span> + np.sin(<span style="color: #0000FF">2</span> * np.pi * t)
+
+fig, ax = plt.subplots()
+ax.plot(t, s)
+
+ax.set(xlabel=<span style="color: #0000FF">&#39;time (s)&#39;</span>, ylabel=<span style="color: #0000FF">&#39;voltage (mV)&#39;</span>,
+title=<span style="color: #0000FF">&#39;About as simple as it gets, folks&#39;</span>)
+ax.grid()
+
+fig.savefig(<span style="color: #0000FF">&quot;test.pgf&quot;</span>)
+plt.show()
+    </pre></div><br>
+
+    <p>Let's see what changes we made</p>
+
+    <p>First, to change the backend to the pgf format:</p>
+    <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">matplotlib.use(<span style="color: #0000FF">&#39;pgf&#39;</span>)</pre></div><br>
+
+  <p>These parameter changes affect the font so your figure will have title, axis labels, etc. in the Latex default font.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">plt.rcParams[<span style="color: #0000FF">&#39;text.latex.preamble&#39;</span>]=[<span style="color: #0000FF">r&quot;\usepackage{lmodern}&quot;</span>]
+params = {<span style="color: #0000FF">&#39;text.usetex&#39;</span> : True,
+                    <span style="color: #0000FF">&#39;font.size&#39;</span> : <span style="color: #0000FF">11</span>,
+                    <span style="color: #0000FF">&#39;font.family&#39;</span> : <span style="color: #0000FF">&#39;lmodern&#39;</span>,
+                    <span style="color: #0000FF">&#39;text.latex.unicode&#39;</span>: True}
+plt.rcParams.update(params)
+</pre></div><br>
+
+<p>This saves the figure in the `.pgf` format</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">fig.savefig(<span style="color: #0000FF">&quot;test.pgf&quot;</span>)
+</pre></div><br>
+
+<h2>Inserting the figure into your Latex document</h2>
+
+<p>Inserting the figure is very simple. Just put the path of your <code>.pgf</code> file and update the width of the figure to be whatever you choose (<code>\columnwidth</code> and <code>textwidth</code> are good options depending on the format of your document)</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\begin</span>{figure}
+    <span style="color: #000080; font-weight: bold">\centering</span>
+    <span style="color: #000080; font-weight: bold">\resizebox</span>{<span style="color: #000080; font-weight: bold">\columnwidth</span>}{!}{<span style="color: #000080; font-weight: bold">\input</span>{plots/test.pgf}}
+    <span style="color: #000080; font-weight: bold">\caption</span>{Caption}
+    <span style="color: #000080; font-weight: bold">\label</span>{fig:my_label}
+<span style="color: #000080; font-weight: bold">\end</span>{figure}
+</pre></div><br>
+
+<h2>Special Cases</h2>
+
+<p>Sometimes when you generate a more complex figure, the output of the <code>savefig.("test.pgf")</code> function call can contain multiple files. Here is an example of that case (original example from <a href=https://matplotlib.org/3.1.1/gallery/images_contours_and_fields/image_annotated_heatmap.html>here</a>)</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">import</span> matplotlib
+matplotlib.use(<span style="color: #0000FF">&#39;pgf&#39;</span>)
+
+<span style="color: #000080; font-weight: bold">import</span> matplotlib.pyplot <span style="color: #000080; font-weight: bold">as</span> plt
+
+plt.rcParams[<span style="color: #0000FF">&#39;text.latex.preamble&#39;</span>]=[<span style="color: #0000FF">r&quot;\usepackage{lmodern}&quot;</span>]
+params = {<span style="color: #0000FF">&#39;text.usetex&#39;</span> : True,
+                    <span style="color: #0000FF">&#39;font.size&#39;</span> : <span style="color: #0000FF">11</span>,
+                    <span style="color: #0000FF">&#39;font.family&#39;</span> : <span style="color: #0000FF">&#39;lmodern&#39;</span>,
+                    <span style="color: #0000FF">&#39;text.latex.unicode&#39;</span>: True}
+plt.rcParams.update(params)
+<span style="color: #008800; font-style: italic"># sphinx_gallery_thumbnail_number = 2</span>
+
+vegetables = [<span style="color: #0000FF">&quot;cucumber&quot;</span>, <span style="color: #0000FF">&quot;tomato&quot;</span>, <span style="color: #0000FF">&quot;lettuce&quot;</span>, <span style="color: #0000FF">&quot;asparagus&quot;</span>,
+          <span style="color: #0000FF">&quot;potato&quot;</span>, <span style="color: #0000FF">&quot;wheat&quot;</span>, <span style="color: #0000FF">&quot;barley&quot;</span>]
+farmers = [<span style="color: #0000FF">&quot;Farmer Joe&quot;</span>, <span style="color: #0000FF">&quot;Upland Bros.&quot;</span>, <span style="color: #0000FF">&quot;Smith Gardening&quot;</span>,
+          <span style="color: #0000FF">&quot;Agrifun&quot;</span>, <span style="color: #0000FF">&quot;Organiculture&quot;</span>, <span style="color: #0000FF">&quot;BioGoods Ltd.&quot;</span>, <span style="color: #0000FF">&quot;Cornylee Corp.&quot;</span>]
+
+harvest = np.array([[<span style="color: #0000FF">0.8</span>, <span style="color: #0000FF">2.4</span>, <span style="color: #0000FF">2.5</span>, <span style="color: #0000FF">3.9</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">4.0</span>, <span style="color: #0000FF">0.0</span>],
+          [<span style="color: #0000FF">2.4</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">4.0</span>, <span style="color: #0000FF">1.0</span>, <span style="color: #0000FF">2.7</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">0.0</span>],
+          [<span style="color: #0000FF">1.1</span>, <span style="color: #0000FF">2.4</span>, <span style="color: #0000FF">0.8</span>, <span style="color: #0000FF">4.3</span>, <span style="color: #0000FF">1.9</span>, <span style="color: #0000FF">4.4</span>, <span style="color: #0000FF">0.0</span>],
+          [<span style="color: #0000FF">0.6</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">0.3</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">3.1</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">0.0</span>],
+          [<span style="color: #0000FF">0.7</span>, <span style="color: #0000FF">1.7</span>, <span style="color: #0000FF">0.6</span>, <span style="color: #0000FF">2.6</span>, <span style="color: #0000FF">2.2</span>, <span style="color: #0000FF">6.2</span>, <span style="color: #0000FF">0.0</span>],
+          [<span style="color: #0000FF">1.3</span>, <span style="color: #0000FF">1.2</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">3.2</span>, <span style="color: #0000FF">5.1</span>],
+          [<span style="color: #0000FF">0.1</span>, <span style="color: #0000FF">2.0</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">1.4</span>, <span style="color: #0000FF">0.0</span>, <span style="color: #0000FF">1.9</span>, <span style="color: #0000FF">6.3</span>]])
+
+
+fig, ax = plt.subplots()
+im = ax.imshow(harvest)
+
+<span style="color: #008800; font-style: italic"># We want to show all ticks...</span>
+ax.set_xticks(np.arange(len(farmers)))
+ax.set_yticks(np.arange(len(vegetables)))
+<span style="color: #008800; font-style: italic"># ... and label them with the respective list entries</span>
+ax.set_xticklabels(farmers)
+ax.set_yticklabels(vegetables)
+
+<span style="color: #008800; font-style: italic"># Rotate the tick labels and set their alignment.</span>
+plt.setp(ax.get_xticklabels(), rotation=<span style="color: #0000FF">45</span>, ha=<span style="color: #0000FF">&quot;right&quot;</span>,
+rotation_mode=<span style="color: #0000FF">&quot;anchor&quot;</span>)
+
+<span style="color: #008800; font-style: italic"># Loop over data dimensions and create text annotations.</span>
+<span style="color: #000080; font-weight: bold">for</span> i <span style="font-weight: bold">in</span> range(len(vegetables)):
+  <span style="color: #000080; font-weight: bold">for</span> j <span style="font-weight: bold">in</span> range(len(farmers)):
+    text = ax.text(j, i, harvest[i, j],
+    ha=<span style="color: #0000FF">&quot;center&quot;</span>, va=<span style="color: #0000FF">&quot;center&quot;</span>, color=<span style="color: #0000FF">&quot;w&quot;</span>)
+
+ax.set_title(<span style="color: #0000FF">&quot;Harvest of local farmers (in tons/year)&quot;</span>)
+fig.tight_layout()
+fig.savefig(<span style="color: #0000FF">&quot;test.pgf&quot;</span>)
+plt.show()
+</pre></div><br>
+
+<p>Running this code will create <strong>two</strong> files: <code>test.pgf</code> and <code>test-img0.pgf</code>. Let's look at what Line 64 of <code>test.pgf</code> looks like</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\pgftext</span><span style="color: #FF0000">[left,bottom]</span>{<span style="color: #000080; font-weight: bold">\pgfimage</span><span style="color: #FF0000">[interpolate=true,width=3.110000in,height=3.110000in]</span>{test-img0.png}}<span style="color: #008800; font-style: italic">%</span>
+</pre></div><br>
+
+<p>As you can see, while generating the figure from the <code>.pgf</code> file, Latex is using <code>test.img0.png</code>.</p>
+
+<p>Let's say that in my Latex input looks like this again, where both <code>test.pgf</code> and <code>test-img0.pgf</code> are in the <code>plots</code> directory</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\begin</span>{figure}
+    <span style="color: #000080; font-weight: bold">\centering</span>
+    <span style="color: #000080; font-weight: bold">\resizebox</span>{<span style="color: #000080; font-weight: bold">\columnwidth</span>}{!}{<span style="color: #000080; font-weight: bold">\input</span>{plots/test.pgf}}
+    <span style="color: #000080; font-weight: bold">\caption</span>{Caption}
+    <span style="color: #000080; font-weight: bold">\label</span>{fig:my_label}
+<span style="color: #000080; font-weight: bold">\end</span>{figure}
+</pre></div><br>
+
+<p><strong>This will fail as is!</strong></p>
+
+<p>You need to modify Line 64 of <code>test.pgf</code> line to look like this</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\pgftext</span><span style="color: #FF0000">[left,bottom]</span>{<span style="color: #000080; font-weight: bold">\pgfimage</span><span style="color: #FF0000">[interpolate=true,width=3.110000in,height=3.110000in]</span>{plots/test-img0.png}}<span style="color: #008800; font-style: italic">%</span>
+</pre></div>
+
+<p>Now your figure will render correctly!</p>
+
+<p>Sometimes the <code>pgf</code> generator will create multiple image files, such as <code>test-img0.png</code>, <code>test-img1.png.</code>, etc. You must modify each path in <code>test.pgf</code> to match the path where the <code>.png</code> files are stored.</p>
+
+<p>And that's it. Enjoy your beautiful figures!</p>
+
+<em>Published: October 2020</em></p>
+</article>
+</div>
+</div>
+
+<div id="copyright" class="container">
+  <ul class="menu">
+    <li><a href="https://html5up.net/telephasic">Telephasic Template by HTML5 UP</a></li>
+  </ul>
+</div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.dropotron.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

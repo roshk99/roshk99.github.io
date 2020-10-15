@@ -56,16 +56,26 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <h2>Multiple Stimuli, One Question using Qualtrics</h2>
           </header>
 
-          <p class="has-line-data" data-line-start="2" data-line-end="3">Do you have a set of stimuli (images, videos, etc.) that you want to ask your participants about? Qualtrics has a useful <strong>Loop and Merge</strong> feature that can allow you to do that. Here is how to set it up.</p>
-          <p class="has-line-data" data-line-start="4" data-line-end="5">Note that this tutorial assumes a working knowledge of Qualtrics, which has great documentation for any general questions you have.</p>
-          <h2 class="code-line" data-line-start=7 data-line-end=8 ><a id="Step_1_Upload_your_stimuli_to_your_Qualtrics_Library_7"></a>Step 1: Upload your stimuli to your Qualtrics Library</h2>
-          <p class="has-line-data" data-line-start="8" data-line-end="9">If your images or videos are already stored on the cloud and are accessible via a URL, skip this step.</p>
-          <p class="has-line-data" data-line-start="10" data-line-end="11">Let us say you have a set of videos labeled <code>001.mp4</code>, <code>002.mp4</code>, and so on. You should first go to the <code>Library</code> Tab at the top of Qualtrics and then click on the <code>Files Library</code> Tab.</p>
-          <p class="has-line-data" data-line-start="12" data-line-end="13">I prefer to create a folder using the button on the left to store all my files for a particular survey.</p>
-          <p class="has-line-data" data-line-start="14" data-line-end="15">Go to the <code>Upload a New File</code> button and upload all your <code>.mp4</code> files</p>
-          <h2 class="code-line" data-line-start=16 data-line-end=17 ><a id="Step_2_Creating_your_spreadsheet_16"></a>Step 2: Creating your spreadsheet</h2>
-          <p class="has-line-data" data-line-start="17" data-line-end="18">I use Excel for this, but any spreadsheet software should work.</p>
-          <p class="has-line-data" data-line-start="19" data-line-end="20">Set up a spreadsheet that looks like this, with a row for each of your stimuli. See the column and row labels. We will use these later.</p>
+          <p>Do you have a set of stimuli (images, videos, etc.) that you want to ask your participants about? Qualtrics has a useful <strong>Loop and Merge</strong> feature that can allow you to do that. Here is how to set it up.</p>
+
+          <p>Note that this tutorial assumes a working knowledge of Qualtrics, which has great documentation for any general questions you have.</p>
+
+          <h2><a id="Step_1_Upload_your_stimuli_to_your_Qualtrics_Library_7"></a>Step 1: Upload your stimuli to your Qualtrics Library</h2>
+
+          <p>If your images or videos are already stored on the cloud and are accessible via a URL, skip this step.</p>
+
+          <p>Let us say you have a set of videos labeled <code>001.mp4</code>, <code>002.mp4</code>, and so on. You should first go to the <code>Library</code> Tab at the top of Qualtrics and then click on the <code>Files Library</code> Tab.</p>
+
+          <p>I prefer to create a folder using the button on the left to store all my files for a particular survey.</p>
+
+          <p>Go to the <code>Upload a New File</code> button and upload all your <code>.mp4</code> files</p>
+
+          <h2>Step 2: Creating your spreadsheet</h2>
+
+          <p>I use Excel for this, but any spreadsheet software should work.</p>
+
+          <p>Set up a spreadsheet that looks like this, with a row for each of your stimuli. See the column and row labels. We will use these later.</p>
+
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
@@ -102,64 +112,100 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
               </tr>
             </tbody>
           </table>
-          <p class="has-line-data" data-line-start="28" data-line-end="29">We will now fill out each of these columns</p>
-          <h2 class="code-line" data-line-start=30 data-line-end=31 ><a id="Step_3_Getting_your_File_IDs_30"></a>Step 3: Getting your File IDs</h2>
-          <p class="has-line-data" data-line-start="31" data-line-end="32">Go back to your Qualtrics Library. Click on the first video <code>001.mp4</code>, and click <code>View</code>.</p>
-          <p class="has-line-data" data-line-start="33" data-line-end="34">The video should open in a new tab with a URL that ends with <code>F={{FILE ID}}</code>, where the <code>FILE ID</code> starts with a <code>F_</code>.</p>
-          <p class="has-line-data" data-line-start="35" data-line-end="36">Copy that file ID and paste it into the second column of your spreadsheet. Repeat for each video.</p>
-          <h2 class="code-line" data-line-start=37 data-line-end=38 ><a id="Step_4_Creating_your_Question_Block_37"></a>Step 4: Creating your Question Block</h2>
-          <p class="has-line-data" data-line-start="38" data-line-end="39">Now go into your survey. Create the question as you would like it to appear for <code>001.mp4</code>.  For example, the HTML view for a centered video with full width and automatic height might look like this:</p>
-          <pre><code>&lt;video class=&quot;qmedia&quot; controls=&quot;true&quot; height=&quot;auto&quot; preload=&quot;auto&quot; width=&quot;100%&quot;&gt;
-            &lt;source src=&quot;{{URL HERE ENDING WITH FILE ID}}&quot; type=&quot;video/mp4&quot;&gt;&lt;embed align=&quot;middle&quot; autoplay=&quot;false&quot; bgcolor=&quot;white&quot; class=&quot;qmedia&quot; controller=&quot;true&quot; height=&quot;auto&quot; pluginspage=&quot;http://www.apple.com/quicktime/download/&quot;  src=&quot;{{URL HERE ENDING WITH FILE ID}}&quot; type=&quot;video/quicktime&quot; width=&quot;100%&quot;&gt;
-            &lt;/video&gt;
-          </code></pre>
-          <p class="has-line-data" data-line-start="44" data-line-end="45">Do you see where the URL appears in the HTML? The File IDs that we copied in Step 3 are the ending of that URL. Ideally, we want to change those File IDs at each iteration to match the ID for each video.</p>
-          <h2 class="code-line" data-line-start=46 data-line-end=47 ><a id="Step_5_Creating_your_HTML_46"></a>Step 5: Creating your HTML</h2>
-          <p class="has-line-data" data-line-start="47" data-line-end="48">Unfortunately, we cannot simply insert the new File ID in the middle of the HTML. So here is the work-around and the reason we need a spreadsheet.</p>
-          <p class="has-line-data" data-line-start="49" data-line-end="50">Copy the HTML for your question into a text editor that allows you to Find and Replace.</p>
-          <p class="has-line-data" data-line-start="51" data-line-end="52">For this text to be a valid equation, we need to make a few replacements.</p>
+
+          <p>We will now fill out each of these columns</p>
+
+          <h2><a id="Step_3_Getting_your_File_IDs_30"></a>Step 3: Getting your File IDs</h2>
+
+          <p>Go back to your Qualtrics Library. Click on the first video <code>001.mp4</code>, and click <code>View</code>.</p>
+
+          <p>The video should open in a new tab with a URL that ends with <code>F={{FILE ID}}</code>, where the <code>FILE ID</code> starts with a <code>F_</code>.</p>
+
+          <p>Copy that file ID and paste it into the second column of your spreadsheet. Repeat for each video.</p>
+
+          <h2></a>Step 4: Creating your Question Block</h2>
+
+          <p>Now go into your survey. Create the question as you would like it to appear for <code>001.mp4</code>.  For example, the HTML view for a centered video with full width and automatic height might look like this:</p>
+
+          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">&lt;video</span> <span style="color: #FF0000">class=</span><span style="color: #0000FF">&quot;qmedia&quot;</span> <span style="color: #FF0000">controls=</span><span style="color: #0000FF">&quot;true&quot;</span> <span style="color: #FF0000">height=</span><span style="color: #0000FF">&quot;auto&quot;</span> <span style="color: #FF0000">preload=</span><span style="color: #0000FF">&quot;auto&quot;</span> <span style="color: #FF0000">width=</span><span style="color: #0000FF">&quot;100%&quot;</span><span style="color: #000080; font-weight: bold">&gt;</span>
+    <span style="color: #000080; font-weight: bold">&lt;source</span> <span style="color: #FF0000">src=</span><span style="color: #0000FF">&quot;{{URL HERE ENDING WITH FILE ID}}&quot;</span> <span style="color: #FF0000">type=</span><span style="color: #0000FF">&quot;video/mp4&quot;</span><span style="color: #000080; font-weight: bold">&gt;&lt;embed</span> <span style="color: #FF0000">align=</span><span style="color: #0000FF">&quot;middle&quot;</span> <span style="color: #FF0000">autoplay=</span><span style="color: #0000FF">&quot;false&quot;</span> <span style="color: #FF0000">bgcolor=</span><span style="color: #0000FF">&quot;white&quot;</span> <span style="color: #FF0000">class=</span><span style="color: #0000FF">&quot;qmedia&quot;</span> <span style="color: #FF0000">controller=</span><span style="color: #0000FF">&quot;true&quot;</span> <span style="color: #FF0000">height=</span><span style="color: #0000FF">&quot;auto&quot;</span> <span style="color: #FF0000">pluginspage=</span><span style="color: #0000FF">&quot;http://www.apple.com/quicktime/download/&quot;</span>  <span style="color: #FF0000">src=</span><span style="color: #0000FF">&quot;{{URL HERE ENDING WITH FILE ID}}&quot;</span> <span style="color: #FF0000">type=</span><span style="color: #0000FF">&quot;video/quicktime&quot;</span> <span style="color: #FF0000">width=</span><span style="color: #0000FF">&quot;100%&quot;</span><span style="color: #000080; font-weight: bold">&gt;</span>
+<span style="color: #000080; font-weight: bold">&lt;/video&gt;</span>
+</pre></div><br>
+
+          <p>Do you see where the URL appears in the HTML? The File IDs that we copied in Step 3 are the ending of that URL. Ideally, we want to change those File IDs at each iteration to match the ID for each video.</p>
+
+          <h2><a id="Step_5_Creating_your_HTML_46"></a>Step 5: Creating your HTML</h2>
+
+          <p>Unfortunately, we cannot simply insert the new File ID in the middle of the HTML. So here is the work-around and the reason we need a spreadsheet.</p>
+
+          <p>Copy the HTML for your question into a text editor that allows you to Find and Replace.</p>
+
+          <p>For this text to be a valid equation, we need to make a few replacements.</p>
+
           <ul>
             <li class="has-line-data" data-line-start="53" data-line-end="54">Quotes (<code>&quot;&quot;</code>) are special characters in equations, so we need to replace each <code>&quot;</code> with a double quote <code>&quot;&quot;</code></li>
             <li class="has-line-data" data-line-start="54" data-line-end="55">We cannot have an equation that is this long, so we need to add some concatenation symbols. Every ~200 characters in your equation, replace a space <code></code> with <code>&quot; &amp; &quot;</code></li>
             <li class="has-line-data" data-line-start="55" data-line-end="57">Add an <code>=</code> to the beginning of the line</li>
           </ul>
-          <p class="has-line-data" data-line-start="57" data-line-end="58">For example, the HTML example from above would become:</p>
-          <pre><code>=&lt;video class=&quot;qmedia&quot; controls=&quot;true&quot; height=&quot;auto&quot; preload=&quot;auto&quot; width=&quot;100%&quot;&gt;
-            &lt;source src=&quot;{{URL HERE ENDING WITH FILE ID}}&quot; &quot; &amp; &quot; type=&quot;video/mp4&quot;&gt;&lt;embed align=&quot;middle&quot; autoplay=&quot;false&quot; bgcolor=&quot;white&quot; class=&quot;qmedia&quot; controller=&quot;true&quot; height=&quot;auto&quot; &quot; &amp; &quot; pluginspage=&quot;http://www.apple.com/quicktime/download/&quot;  src=&quot;{{URL HERE ENDING WITH FILE ID}}&quot; type=&quot;video/quicktime&quot; &quot; &amp; &quot; width=&quot;100%&quot;&gt;
-            &lt;/video&gt;
-          </code></pre>
-          <p class="has-line-data" data-line-start="63" data-line-end="64">Now look at your spreadsheet. Your first File ID is located in cell <code>B2</code>.</p>
-          <p class="has-line-data" data-line-start="65" data-line-end="66">**Find the File ID in your HTML and replace it with <code>&quot; &amp; B2 &amp; &quot;</code>. **</p>
-          <p class="has-line-data" data-line-start="67" data-line-end="68">You are now ready to copy your equation into cell <code>C2</code>. The File ID from video <code>001.mp4</code> should automatically be populated into cell <code>C2</code>. If you drag this equation down column <code>C</code>, you now have all your HTMLs!</p>
-          <h2 class="code-line" data-line-start=69 data-line-end=70 ><a id="Question_Randomization_69"></a>Question Randomization</h2>
-          <p class="has-line-data" data-line-start="71" data-line-end="72">Unfortunately, the default randomization within Loop &amp; Merge in Qualtrics does not have a way of ensuring that each stimuli is shown an equal number of times. The way to achieve this is complicated, and credit to <a href="https://stackoverflow.com/questions/31957481/loop-and-merge-in-qualtrics-random-equal-allocation">this</a> for the idea.</p>
-          <p class="has-line-data" data-line-start="73" data-line-end="74">Before the question block, add another question block. This question will be hidden and will just function as a way to randomly choose the subset of stimuli each participant will view.</p>
-          <p class="has-line-data" data-line-start="75" data-line-end="76">Create a multiple choice question in your question block. In the question text, go to HTML view and paste this text</p>
-          <pre><code class="has-line-data" data-line-start="78" data-line-end="86">&lt;script&gt;
-            Qualtrics.SurveyEngine.addOnload(function() {
-              var questionDiv = this.getQuestionContainer();
-              questionDiv.style.display = &quot;none&quot;;
-              this.clickNextButton();
-            });
-          &lt;/script&gt;
-          </code></pre>
-          <p class="has-line-data" data-line-start="87" data-line-end="88">This will ensure that this whole block will be hidden from your participants.</p>
-          <p class="has-line-data" data-line-start="89" data-line-end="90">Now copy <code>Column C</code> in your spreadsheet from <code>Row 2</code> down. Click into the first of the multiple choice answers and paste. This will create an answer choice for each of your stimuli. It may take a long time to save the survey, so be patient with it.</p>
-          <p class="has-line-data" data-line-start="91" data-line-end="92">Next click on the gear icon next to the question and go to <code>Randomization</code>. Click <code>Advanced Randomization -&gt; Set Up Advanced Randomization</code>.</p>
-          <p class="has-line-data" data-line-start="93" data-line-end="94">On the left side of this window, you should see all the choices, one for each stimuli. The middle box on the right side titled <code>Random Subset</code> has a right arrow next to it. Click this right arrow until all your choices are populated in the <code>Random Subset</code> box. Click <code>Evenly Display Choices</code> and put in the number of stimuli you want to present to each participant. Hit <code>Save</code> twice.</p>
-          <p class="has-line-data" data-line-start="95" data-line-end="96">This means that your hidden question will randomly choose a subset of your stimuli.</p>
-          <h2 class="code-line" data-line-start=97 data-line-end=98 ><a id="Completing_the_Loop__Merge_97"></a>Completing the Loop &amp; Merge</h2>
-          <p class="has-line-data" data-line-start="98" data-line-end="99">Now we need to ask a question for each of these stimuli</p>
-          <p class="has-line-data" data-line-start="100" data-line-end="101">Go to <code>Block Options -&gt; Loop &amp; Merge</code> in your question block, and turn on Loop &amp; Merge.</p>
-          <p class="has-line-data" data-line-start="102" data-line-end="103">Click <code>Loop based off a question</code> and then select your hidden question. In the second drop-down, select <code>Displayed Choices</code>.  A large number of blue rows should appear, one row for each stimuli.</p>
-          <p class="has-line-data" data-line-start="104" data-line-end="105">Hit <code>Save</code>.</p>
-          <p class="has-line-data" data-line-start="106" data-line-end="107">Now in your question text, you can put something like this to display the Question Number as well as the stimuli.</p>
-          <pre><code>Question ${lm://CurrentLoopNumber} out of 10
 
-            ${lm://Field/1}
-          </code></pre>
+          <p>For example, the HTML example from above would become:</p>
+
+          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">=<span style="color: #000080; font-weight: bold">&lt;video</span> <span style="color: #FF0000">class=</span><span style="color: #0000FF">&quot;qmedia&quot;</span> <span style="color: #FF0000">controls=</span><span style="color: #0000FF">&quot;true&quot;</span> <span style="color: #FF0000">height=</span><span style="color: #0000FF">&quot;auto&quot;</span> <span style="color: #FF0000">preload=</span><span style="color: #0000FF">&quot;auto&quot;</span> <span style="color: #FF0000">width=</span><span style="color: #0000FF">&quot;100%&quot;</span><span style="color: #000080; font-weight: bold">&gt;</span>
+            <span style="color: #000080; font-weight: bold">&lt;source</span> <span style="color: #FF0000">src=</span><span style="color: #0000FF">&quot;{{URL HERE ENDING WITH FILE ID}}&quot;</span> <span style="color: #a61717; background-color: #e3d2d2">&quot;</span> <span style="color: #a61717; background-color: #e3d2d2">&amp;</span> <span style="color: #a61717; background-color: #e3d2d2">&quot;</span> <span style="color: #FF0000">type=</span><span style="color: #0000FF">&quot;video/mp4&quot;</span><span style="color: #000080; font-weight: bold">&gt;&lt;embed</span> <span style="color: #FF0000">align=</span><span style="color: #0000FF">&quot;middle&quot;</span> <span style="color: #FF0000">autoplay=</span><span style="color: #0000FF">&quot;false&quot;</span> <span style="color: #FF0000">bgcolor=</span><span style="color: #0000FF">&quot;white&quot;</span> <span style="color: #FF0000">class=</span><span style="color: #0000FF">&quot;qmedia&quot;</span> <span style="color: #FF0000">controller=</span><span style="color: #0000FF">&quot;true&quot;</span> <span style="color: #FF0000">height=</span><span style="color: #0000FF">&quot;auto&quot;</span> <span style="color: #a61717; background-color: #e3d2d2">&quot;</span> <span style="color: #a61717; background-color: #e3d2d2">&amp;</span> <span style="color: #a61717; background-color: #e3d2d2">&quot;</span> <span style="color: #FF0000">pluginspage=</span><span style="color: #0000FF">&quot;http://www.apple.com/quicktime/download/&quot;</span>  <span style="color: #FF0000">src=</span><span style="color: #0000FF">&quot;{{URL HERE ENDING WITH FILE ID}}&quot;</span> <span style="color: #FF0000">type=</span><span style="color: #0000FF">&quot;video/quicktime&quot;</span> <span style="color: #a61717; background-color: #e3d2d2">&quot;</span> <span style="color: #a61717; background-color: #e3d2d2">&amp;</span> <span style="color: #a61717; background-color: #e3d2d2">&quot;</span> <span style="color: #FF0000">width=</span><span style="color: #0000FF">&quot;100%&quot;</span><span style="color: #000080; font-weight: bold">&gt;</span>
+<span style="color: #000080; font-weight: bold">&lt;/video&gt;</span>
+</pre></div><br>
+
+          <p>Now look at your spreadsheet. Your first File ID is located in cell <code>B2</code>.</p>
+
+          <p>**Find the File ID in your HTML and replace it with <code>&quot; &amp; B2 &amp; &quot;</code>. **</p>
+
+          <p>You are now ready to copy your equation into cell <code>C2</code>. The File ID from video <code>001.mp4</code> should automatically be populated into cell <code>C2</code>. If you drag this equation down column <code>C</code>, you now have all your HTMLs!</p>
+
+          <h2>Step 6: Question Randomization</h2>
+
+          <p>Unfortunately, the default randomization within Loop &amp; Merge in Qualtrics does not have a way of ensuring that each stimuli is shown an equal number of times. The way to achieve this is complicated, and credit to <a href="https://stackoverflow.com/questions/31957481/loop-and-merge-in-qualtrics-random-equal-allocation">this</a> for the idea.</p>
+
+          <p>Before the question block, add another question block. This question will be hidden and will just function as a way to randomly choose the subset of stimuli each participant will view.</p>
+
+          <p>Create a multiple choice question in your question block. In the question text, go to HTML view and paste this text</p>
+
+          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">&lt;script&gt;</span>
+      Qualtrics.SurveyEngine.addOnload(<span style="color: #000080; font-weight: bold">function</span>() {
+      <span style="color: #000080; font-weight: bold">var</span> questionDiv = <span style="color: #000080; font-weight: bold">this</span>.getQuestionContainer();
+      questionDiv.style.display = <span style="color: #0000FF">&quot;none&quot;</span>;
+      <span style="color: #000080; font-weight: bold">this</span>.clickNextButton();});
+<span style="color: #000080; font-weight: bold">&lt;/script&gt;</span>
+</pre></div><br>
+
+          <p>This will ensure that this whole block will be hidden from your participants.</p>
+
+          <p>Now copy <code>Column C</code> in your spreadsheet from <code>Row 2</code> down. Click into the first of the multiple choice answers and paste. This will create an answer choice for each of your stimuli. It may take a long time to save the survey, so be patient with it.</p>
+
+          <p>Next click on the gear icon next to the question and go to <code>Randomization</code>. Click <code>Advanced Randomization -&gt; Set Up Advanced Randomization</code>.</p>
+
+          <p>On the left side of this window, you should see all the choices, one for each stimuli. The middle box on the right side titled <code>Random Subset</code> has a right arrow next to it. Click this right arrow until all your choices are populated in the <code>Random Subset</code> box. Click <code>Evenly Display Choices</code> and put in the number of stimuli you want to present to each participant. Hit <code>Save</code> twice.</p>
+
+          <p>This means that your hidden question will randomly choose a subset of your stimuli.</p>
+
+          <h2>Step 7: Completing the Loop &amp; Merge</h2>
+
+          <p>Now we need to ask a question for each of these stimuli</p>
+
+          <p>Go to <code>Block Options -&gt; Loop &amp; Merge</code> in your question block, and turn on Loop &amp; Merge.</p>
+
+          <p>Click <code>Loop based off a question</code> and then select your hidden question. In the second drop-down, select <code>Displayed Choices</code>.  A large number of blue rows should appear, one row for each stimuli.</p>
+
+          <p>Hit <code>Save</code>.</p>
+
+          <p>Now in your question text, you can put something like this to display the Question Number as well as the stimuli.</p>
+
+          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Question <span style="color: #0000FF">$</span>{lm://CurrentLoopNumber} out of <span style="color: #0000FF">10</span>
+
+            <span style="color: #0000FF">$</span>{lm://Field/1}
+</pre></div><br>
+
           <p class="has-line-data" data-line-start="113" data-line-end="114">Test our your new set of questions by hitting <code>Preview</code> at the top and trying out your survey</p>
-          <p class="has-line-data" data-line-start="116" data-line-end="118"><em>Last updated: August 2020</em><br>
+          <p class="has-line-data" data-line-start="116" data-line-end="118"><em>Last updated: October 2020</em><br>
             <em>Originally published: July 2020</em></p>
           </article>
         </div>

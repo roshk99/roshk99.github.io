@@ -139,7 +139,15 @@ plt.rcParams.update(params)
 
 <h2>Inserting the figure into your Latex document</h2>
 
-<p>Inserting the figure is very simple. Just put the path of your <code>.pgf</code> file and update the width of the figure to be whatever you choose (<code>\columnwidth</code> and <code>textwidth</code> are good options depending on the format of your document)</p>
+<p>Inserting the figure is very simple. Update the preamble (before the <code>\begin{document}</code>) with:</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\usepackage</span>{tikz}
+<span style="color: #000080; font-weight: bold">\usepackage</span>{pgfplots}
+<span style="color: #000080; font-weight: bold">\pgfplotsset</span>{compat=1.17}
+</pre></div><br>
+
+
+<p>Now in the body of your document put the path of your <code>.pgf</code> file and update the width of the figure to be whatever you choose (<code>\columnwidth</code> and <code>textwidth</code> are good options depending on the format of your document)</p>
 
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\begin</span>{figure}
     <span style="color: #000080; font-weight: bold">\centering</span>
@@ -148,6 +156,24 @@ plt.rcParams.update(params)
     <span style="color: #000080; font-weight: bold">\label</span>{fig:my_label}
 <span style="color: #000080; font-weight: bold">\end</span>{figure}
 </pre></div><br>
+
+Let's compare the two images:<br><br>
+
+<div class="row">
+  <div class="col-6 col-12-narrower">
+      <header>
+        <h4>With Matplotlib Style</h3>
+      </header>
+      <a href="#" class="image featured"><img src="../images/test.png" alt="" /></a>
+      <p></p>
+  </div>
+  <div class="col-6 col-12-narrower">
+      <header>
+        <h4>With Latex Style</h3>
+      </header>
+      <a href="#" class="image featured"><img src="../images/test_latex.PNG" alt="" /></a>
+  </div>
+</div>
 
 <h2>Special Cases</h2>
 
@@ -165,6 +191,8 @@ params = {<span style="color: #0000FF">&#39;text.usetex&#39;</span> : True,
                     <span style="color: #0000FF">&#39;text.latex.unicode&#39;</span>: True}
 plt.rcParams.update(params)
 <span style="color: #008800; font-style: italic"># sphinx_gallery_thumbnail_number = 2</span>
+
+<span style="color: #000080; font-weight: bold">import</span> numpy <span style="color: #000080; font-weight: bold">as</span> np
 
 vegetables = [<span style="color: #0000FF">&quot;cucumber&quot;</span>, <span style="color: #0000FF">&quot;tomato&quot;</span>, <span style="color: #0000FF">&quot;lettuce&quot;</span>, <span style="color: #0000FF">&quot;asparagus&quot;</span>,
           <span style="color: #0000FF">&quot;potato&quot;</span>, <span style="color: #0000FF">&quot;wheat&quot;</span>, <span style="color: #0000FF">&quot;barley&quot;</span>]
@@ -202,22 +230,22 @@ rotation_mode=<span style="color: #0000FF">&quot;anchor&quot;</span>)
 
 ax.set_title(<span style="color: #0000FF">&quot;Harvest of local farmers (in tons/year)&quot;</span>)
 fig.tight_layout()
-fig.savefig(<span style="color: #0000FF">&quot;test.pgf&quot;</span>)
+fig.savefig(<span style="color: #0000FF">&quot;test2.pgf&quot;</span>)
 plt.show()
 </pre></div><br>
 
-<p>Running this code will create <strong>two</strong> files: <code>test.pgf</code> and <code>test-img0.pgf</code>. Let's look at what Line 64 of <code>test.pgf</code> looks like</p>
+<p>Running this code will create <strong>two</strong> files: <code>test2.pgf</code> and <code>test2-img0.pgf</code>. Let's look at what Line 64 of <code>test.pgf</code> looks like</p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\pgftext</span><span style="color: #FF0000">[left,bottom]</span>{<span style="color: #000080; font-weight: bold">\pgfimage</span><span style="color: #FF0000">[interpolate=true,width=3.110000in,height=3.110000in]</span>{test-img0.png}}<span style="color: #008800; font-style: italic">%</span>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\pgftext</span><span style="color: #FF0000">[left,bottom]</span>{<span style="color: #000080; font-weight: bold">\pgfimage</span><span style="color: #FF0000">[interpolate=true,width=3.110000in,height=3.110000in]</span>{test2-img0.png}}<span style="color: #008800; font-style: italic">%</span>
 </pre></div><br>
 
-<p>As you can see, while generating the figure from the <code>.pgf</code> file, Latex is using <code>test.img0.png</code>.</p>
+<p>As you can see, while generating the figure from the <code>.pgf</code> file, Latex is using <code>test2.img0.png</code>.</p>
 
-<p>Let's say that in my Latex input looks like this again, where both <code>test.pgf</code> and <code>test-img0.pgf</code> are in the <code>plots</code> directory</p>
+<p>Let's say that in my Latex input looks like this again, where both <code>test2.pgf</code> and <code>test2-img0.pgf</code> are in the <code>plots</code> directory</p>
 
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\begin</span>{figure}
     <span style="color: #000080; font-weight: bold">\centering</span>
-    <span style="color: #000080; font-weight: bold">\resizebox</span>{<span style="color: #000080; font-weight: bold">\columnwidth</span>}{!}{<span style="color: #000080; font-weight: bold">\input</span>{plots/test.pgf}}
+    <span style="color: #000080; font-weight: bold">\resizebox</span>{<span style="color: #000080; font-weight: bold">\columnwidth</span>}{!}{<span style="color: #000080; font-weight: bold">\input</span>{plots/test2.pgf}}
     <span style="color: #000080; font-weight: bold">\caption</span>{Caption}
     <span style="color: #000080; font-weight: bold">\label</span>{fig:my_label}
 <span style="color: #000080; font-weight: bold">\end</span>{figure}
@@ -225,12 +253,30 @@ plt.show()
 
 <p><strong>This will fail as is!</strong></p>
 
-<p>You need to modify Line 64 of <code>test.pgf</code> line to look like this</p>
+<p>You need to modify Line 64 of <code>test2.pgf</code> line to look like this</p>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\pgftext</span><span style="color: #FF0000">[left,bottom]</span>{<span style="color: #000080; font-weight: bold">\pgfimage</span><span style="color: #FF0000">[interpolate=true,width=3.110000in,height=3.110000in]</span>{plots/test-img0.png}}<span style="color: #008800; font-style: italic">%</span>
-</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">\pgftext</span><span style="color: #FF0000">[left,bottom]</span>{<span style="color: #000080; font-weight: bold">\pgfimage</span><span style="color: #FF0000">[interpolate=true,width=3.110000in,height=3.110000in]</span>{plots/test2-img0.png}}<span style="color: #008800; font-style: italic">%</span>
+</pre></div><br>
 
 <p>Now your figure will render correctly!</p>
+
+Let's compare the two images:<br><br>
+
+<div class="row">
+  <div class="col-6 col-12-narrower">
+      <header>
+        <h4>With Matplotlib Style</h3>
+      </header>
+      <a href="#" class="image featured"><img src="../images/test2.png" alt="" /></a>
+      <p></p>
+  </div>
+  <div class="col-6 col-12-narrower">
+      <header>
+        <h4>With Latex Style</h3>
+      </header>
+      <a href="#" class="image featured"><img src="../images/test2_latex.PNG" alt="" /></a>
+  </div>
+</div>
 
 <p>Sometimes the <code>pgf</code> generator will create multiple image files, such as <code>test-img0.png</code>, <code>test-img1.png.</code>, etc. You must modify each path in <code>test.pgf</code> to match the path where the <code>.png</code> files are stored.</p>
 

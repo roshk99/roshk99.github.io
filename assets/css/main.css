@@ -3114,7 +3114,7 @@ section, summary, time, mark, audio, video {
 			height: 32px;
 			border-radius: 50%;
 			background: #fff;
-			border: 3px solid #fe6847;
+			border: 3px solid #1565c0;
 			position: absolute;
 			top: 5.5%;
 			right: -17.5px
@@ -3127,14 +3127,14 @@ section, summary, time, mark, audio, video {
 			font-size: 30px;
 			color: #fff;
 			border-radius: 0 50px 50px 0;
-			background: #fe6847;
+			background: #1565c0;
 			text-align: center;
 			position: relative
 		}
 
 		.main-timeline4 .year:before {
 			content: "";
-			border-top: 35px solid #f59c8b;
+			border-top: 35px solid #3d86da;
 			border-left: 35px solid transparent;
 			position: absolute;
 			bottom: -35px;
@@ -3171,7 +3171,7 @@ section, summary, time, mark, audio, video {
 
 		.main-timeline4 .timeline:nth-child(4n) .year {
 			border-radius: 50px 0 0 50px;
-			background: #7eda99
+			background: #0277bd
 		}
 
 		.main-timeline4 .timeline:nth-child(2n) .year:before {
@@ -3204,35 +3204,35 @@ section, summary, time, mark, audio, video {
 		}
 
 		.main-timeline4 .timeline:nth-child(4n) .timeline-icon {
-			border-color: #7eda99
+			border-color: #0277bd
 		}
 
 		.main-timeline4 .timeline:nth-child(4n) .year:before {
-			border-top-color: #92efad
+			border-top-color: #1e9ad6
 		}
 
 		.main-timeline4 .timeline:nth-child(4n+1) .timeline-icon {
-			border-color: #8a5ec1
+			border-color: #051896
 		}
 
 		.main-timeline4 .timeline:nth-child(4n+1) .year {
-			background: #8a5ec1
+			background: #051896
 		}
 
 		.main-timeline4 .timeline:nth-child(4n+1) .year:before {
-			border-top-color: #a381cf
+			border-top-color: #2f47c7
 		}
 
 		.main-timeline4 .timeline:nth-child(4n+2) .timeline-icon {
-			border-color: #f98d9c
+			border-color: #29a2e3
 		}
 
 		.main-timeline4 .timeline:nth-child(4n+2) .year {
-			background: #f98d9c
+			background: #29a2e3
 		}
 
 		.main-timeline4 .timeline:nth-child(4n+2) .year:before {
-			border-top-color: #f2aab3
+			border-top-color: #5bbde0
 		}
 
 		@media only screen and (max-width:767px) {
@@ -3277,3 +3277,186 @@ section, summary, time, mark, audio, video {
 
 
 		/*end timeline*/
+
+/* =====================================================
+   Research page — accordion + publication badges
+   ===================================================== */
+
+	/* Accordion header matches site palette */
+	.accordion .card {
+		border-color: #dde2f5;
+		margin-bottom: 0.4em;
+		border-radius: 4px !important;
+		overflow: hidden;
+	}
+
+	.accordion .card-header {
+		background-color: #f0f3ff;
+		border-bottom: 1px solid #dde2f5;
+		padding: 0;
+	}
+
+	.accordion .btn-link {
+		color: #051896;
+		font-weight: 600;
+		width: 100%;
+		text-align: left;
+		text-decoration: none;
+		padding: 0.75em 1em;
+		display: block;
+	}
+
+	.accordion .btn-link:hover,
+	.accordion .btn-link:focus {
+		color: #29a2e3;
+		text-decoration: none;
+		box-shadow: none;
+	}
+
+	/* Publication type badges */
+	.pub-type {
+		display: inline-block;
+		font-size: 0.68em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		padding: 0.18em 0.6em;
+		border-radius: 3px;
+		margin-right: 0.35em;
+		vertical-align: middle;
+		line-height: 1.6;
+	}
+
+	.pub-type-conference { background: #051896; color: #fff; }
+	.pub-type-workshop   { background: #29a2e3; color: #fff; }
+	.pub-type-journal    { background: #0277bd; color: #fff; }
+	.pub-type-thesis     { background: #1565c0; color: #fff; }
+
+/* =====================================================
+   Education & Skills page
+   ===================================================== */
+
+	/* Skill badge pills */
+	.skill-group {
+		margin-bottom: 1.1em;
+	}
+
+	.skill-group-label {
+		font-size: 0.7em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #999;
+		margin: 0 0 0.5em;
+	}
+
+	.skill-tags {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
+
+	.skill-tags li {
+		background: #051896;
+		color: #fff;
+		font-size: 0.8em;
+		font-weight: 600;
+		padding: 0.3em 0.85em;
+		border-radius: 2em;
+		white-space: nowrap;
+		letter-spacing: 0.02em;
+	}
+
+	/* Education entries */
+	.education-entry {
+		padding: 1.1em 0;
+		border-bottom: 1px solid #e8e8e8;
+	}
+
+	.education-entry:last-child {
+		border-bottom: none;
+	}
+
+	.education-entry h3 {
+		margin: 0 0 0.2em;
+		font-size: 1.05em;
+	}
+
+	.edu-years {
+		font-size: 0.78em;
+		font-weight: 400;
+		color: #888;
+		margin-left: 0.4em;
+	}
+
+	.edu-degree {
+		margin: 0;
+		color: #555;
+		font-size: 0.95em;
+	}
+
+/* =====================================================
+   News scroll box
+   ===================================================== */
+
+	.news-scroll-wrapper {
+		position: relative;
+	}
+
+	.news-scroll-wrapper::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 3em;
+		background: linear-gradient(to bottom, rgba(255,255,255,0), #fff);
+		pointer-events: none;
+	}
+
+	.news-scroll {
+		max-height: 350px;
+		overflow-y: auto;
+		padding-right: 0.75em;
+		padding-bottom: 0.5em;
+		/* Firefox */
+		scrollbar-width: thin;
+		scrollbar-color: #ccc transparent;
+	}
+
+	.news-scroll::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	.news-scroll::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	.news-scroll::-webkit-scrollbar-thumb {
+		background-color: #ccc;
+		border-radius: 3px;
+	}
+
+	.news-scroll::-webkit-scrollbar-thumb:hover {
+		background-color: #999;
+	}
+
+	.news-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.news-list li {
+		padding: 0.45em 0;
+		border-bottom: 1px solid #f0f0f0;
+		line-height: 1.55;
+	}
+
+	.news-list li:last-child {
+		border-bottom: none;
+		padding-bottom: 2.5em;
+	}
